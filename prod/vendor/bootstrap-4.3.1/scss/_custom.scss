@@ -1,0 +1,18 @@
+// Change default bootstrap variables
+$teal: #c0e3e7;
+
+// Grid containers
+$container-max-widths: (
+  xl: 1630px
+);
+
+$theme-colors: (
+	'teal': $teal
+);
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$headings-font-family: 'Alata Regular', 'Helvetica', sans-serif;
+

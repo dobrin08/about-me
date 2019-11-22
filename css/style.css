@@ -1,0 +1,309 @@
+/* 
+	Table of Contents
+	update on Fri Nov 22 2019 10:23:00 GMT+0200 (FLE Standard Time)
+
+	I.   Generic --------------------------------------
+	     01. Reset ------------------------------------
+	     02. Base -------------------------------------
+	     03. Fonts ------------------------------------
+	     04. Helpers ----------------------------------
+	II.  Regions --------------------------------------
+	     01. Footer -----------------------------------
+	     02. Header -----------------------------------
+	     03. Timeline ---------------------------------
+	     04. Wrapper ----------------------------------
+	III. Modules --------------------------------------
+	     01. Button -----------------------------------
+	     02. Card -------------------------------------
+	     03. Form Elements ----------------------------
+	     04. Form -------------------------------------
+	     05. List -------------------------------------
+	     06. Nav --------------------------------------
+	     07. Section ----------------------------------
+	     08. Slider -----------------------------------
+	     09. Table ------------------------------------
+ */
+
+/* ------------------------------------------------------------ *\
+	I.   Generic
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
+
+*,
+*:before,
+*:after { padding: 0; margin: 0; outline: 0; }
+
+details, menu { display: block; }
+
+html,
+body { height: 100%; }
+
+html { tap-highlight-color: rgba(0,0,0,0); }
+
+body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; text-size-adjust: none; }
+
+img, iframe, video, audio, object { max-width: 100%; }
+img, iframe { border: 0 none; }
+img { height: auto; display: inline-block; }
+
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="image"],
+label[for] { cursor: pointer; }
+
+a[href^="tel"],
+button[disabled],
+input[disabled],
+textarea[disabled],
+select[disabled] { cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { padding: 0; border: 0; }
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea,
+a[href^="tel"] { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+textarea { -webkit-overflow-scrolling: touch; overflow-scrolling: touch; }
+
+button,
+input,
+optgroup,
+select,
+textarea { color: inherit; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+
+input:-ms-input-placeholder { color: inherit; opacity: 1; }
+
+input::placeholder { color: inherit; opacity: 1; }
+textarea:-ms-input-placeholder { color: inherit; opacity: 1; }
+textarea::placeholder { color: inherit; opacity: 1; }
+
+input:-webkit-autofill { -webkit-text-fill-color: inherit !important; -webkit-box-shadow: 0 0 0 1000px #fff inset; }
+
+table { width: 100%; border-spacing: 0; }
+
+nav ul,
+nav ol { list-style: none outside none; }
+
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body { min-width: 320px; background: #f3f3f3; font-family: 'Open_sans Regular', 'Arial', 'Helvetica', sans-serif; font-size: 1rem; line-height: 1.5; color: black; }
+
+a { color: inherit; }
+a:hover { text-decoration: none; }
+
+a[href^="tel"] { text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin-bottom: 0.75em; }
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child { margin-bottom: 0; }
+
+@media (max-width: 1499px) {
+	html { font-size: 14px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Alata Regular';
+    src: url('../fonts/alata-regular.woff2') format('woff2'),
+         url('../fonts/alata-regular.woff') format('woff'),
+         url('../fonts/alata-regular.svg#alataregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open_sans Regular';
+    src: url('../fonts/opensans-regular.woff2') format('woff2'),
+         url('../fonts/opensans-regular.woff') format('woff'),
+         url('../fonts/opensans-regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------------------------------------------------------------ *\
+	Helpers
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+	II.  Regions
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer {  }
+
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {  }
+
+/* ------------------------------------------------------------ *\
+	Timeline
+\* ------------------------------------------------------------ */
+
+.timeline { position: relative; padding: 50px 0; list-style: none outside none; }
+.timeline:before { content: " "; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background-color: #07cb79; -ms-transform: translateX(-50%); transform: translateX(-50%); }
+
+.timeline li { position: relative; float: left; clear: left; width: 50%; margin-bottom: 20px; }
+.timeline li:nth-child(2){ margin-top: 60px; }
+
+.timeline-badge { position: absolute; top: 29px; z-index: 100; right: -12px; width: 24px; height: 24px; font-size: 1.4rem; color: black; text-align: center; }
+
+.timeline .card { width: 90%; border-top: 4px solid #07cb79; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175); }
+.timeline .card:before { content: " "; position: absolute; top: 26px; right: -15px; display: inline-block; border-top: 15px solid transparent; border-right: 0 solid #ccc; border-bottom: 15px solid transparent; border-left: 15px solid #ccc; }
+.timeline .card:after { content: " "; position: absolute; top: 27px; right: -14px; display: inline-block; border-top: 14px solid transparent; border-left: 14px solid #fff; border-right: 0 solid #fff; border-bottom: 14px solid transparent; }
+
+.timeline li.timeline-inverted { float: right; clear: right; }
+.timeline li.timeline-inverted .timeline-badge { left: -12px; }
+.timeline li.timeline-inverted .card { float: right; }
+.timeline li.timeline-inverted .card:before { right: auto; left: -15px; border-left-width: 0; border-right-width: 15px; }
+.timeline li.timeline-inverted .card:after { right: auto; left: -14px; border-right-width: 14px; border-left-width: 0; }
+
+@media (max-width: 767px) {
+	.timeline { padding: 30px 0; }
+	.timeline:before { left: 0; -ms-transform: translateX(0); transform: translateX(0); }
+
+	.timeline li,
+	.timeline li.timeline-inverted { float: none; width: calc(100% - 30px); margin-right: 0; margin-left: 30px; }
+	.timeline li:nth-child(2) { margin-top: 0; }
+
+	.timeline .card { float: none; width: 100%; margin-left: 0; }
+	
+	.timeline li.timeline-inverted .card { float: none; }
+
+	.timeline-badge,
+	.timeline li.timeline-inverted .timeline-badge { top: 30px; left: -40.5px; }
+	.timeline .card:before { right: auto; left: -30px; border-right: 15px solid #ccc; border-left-color: transparent; }
+	.timeline .card:after { right: auto; left: -29px; border-right: 15px solid #fff; border-left-color: transparent; }
+}
+
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { padding-top: 60px; }
+.wrapper:before,
+.wrapper:after { content: ''; position: fixed; z-index: -1; width: 0; height: 0; border-top: 250px solid transparent; border-bottom: 250px solid transparent; }
+.wrapper:before { top: 100px; left: 0; border-left: 1000px solid #8bb6e4; }
+.wrapper:after { bottom: 100px; right: 0; border-right: 1000px solid #9cdcab; }
+
+@media (max-width: 767px) {
+	.wrapper { padding-top: 30px; }
+	.wrapper:before,
+	.wrapper:after { border-top-width: 125px; border-bottom-width: 125px; }
+	.wrapper:before { border-left-width: 250px; }
+	.wrapper:after { border-right-width: 250px }
+}
+
+/* ------------------------------------------------------------ *\
+	III. Modules
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+/* ------------------------------------------------------------ *\
+	Card
+\* ------------------------------------------------------------ */
+
+.card-contacts img { width: 100%; max-width: 300px; margin: 0 auto; }
+
+/* ------------------------------------------------------------ *\
+	Form Elements
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {  }
+
+/* ------------------------------------------------------------ *\
+	List
+\* ------------------------------------------------------------ */
+
+[class^="list-"] { list-style: none outside none; }
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+@media (min-width: 1650px) {
+	.navbar-expand .navbar-nav { padding-right: 15px; padding-left: 15px; }
+}
+
+@media (max-width: 375px) {
+	.navbar-expand .navbar-nav .nav-link { padding-right: .4rem; padding-left: .4rem; }
+}
+
+/* ------------------------------------------------------------ *\
+	Section
+\* ------------------------------------------------------------ */
+
+.section {  }
+.section-head + .section-body,
+.section-body + .section-bottom {  }
+
+.section-title {  }
+
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.slider {  }
+
+.slider .slides { list-style: none outside none; }
+
+/* ------------------------------------------------------------ *\
+	Table
+\* ------------------------------------------------------------ */
+
+.table {  }

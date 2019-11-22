@@ -1,0 +1,1 @@
+!function(t,o,n,c){t(o);t(n).ready(function(){t("#card-contacts").stick_in_parent({offset_top:60}),t('[data-toggle="tooltip"]').tooltip()})}(jQuery,window,document);
