@@ -1,6 +1,6 @@
 # Dobrin Dobrev CV Template
 
-> [contacts@dobrindobrev.com](mailto:contacts@dobrindobrev.com)
+> [contacts@dobrin-dobrev.com](mailto:contacts@dobrin-dobrev.com)
 
 > [GitHub @dobrin08:octocat:](https://github.com/dobrin08)
 
